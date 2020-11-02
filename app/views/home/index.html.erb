@@ -1,5 +1,87 @@
-<h1>Home#index</h1>
-<p>Welcome <%= @name %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointments</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+  />
+    <link rel="stylesheets" href="styles.css" />
+</head>
 
+    <header>
+        <h3>Welcome <%= @name %> <%= @last_name %></h3>
+        <nav class="nav">
+        <a href="/home/index" class="logo">NJ Med</a>
+        <ul class="nav-list">
+            <li class="nav-items">
+                <a href="#" class="nav-link">home</a>
+            </li>
+            <li class="nav-items">
+                <a href="#" class="nav-link">TeleVisit</a>
+            </li>
+            <li class="nav-items">
+                <a href="view-records.html" class="nav-link">View My Records</a>
+            </li>
+            <li class="nav-items">
+                <a href="http://localhost:3000/users/edit" class="nav-link">Manage Account</a>
+            </li>
+            <li class="nav-items">
+                <a href="/home/book" class="nav-link">Book A New Appointment</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+<body>
+    <main>
+        <div class="alert">
+          <h3> Alerts: </h3>
+          <h3> News: </h3>
+          <div class="text-box">
 
-<%= button_to "logout", destroy_user_session_path, method: :delete %>
+          </div>
+        </div>
+
+        <div class="book">
+                <h1>Upcoming Appointments</h1>
+
+        </div>
+
+            <div class="previous">
+                <h2>Previous Appointments</h2>
+                <div class="text-box">
+
+                </div>
+            </div>
+
+    </main>
+    <footer id="contact">
+        <ul class="social-list">
+            <li class="social-item">
+                <a class="social-link" target ="_blank" href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            target="_blank"
+            href="mailto:roderod22@gmail.com"
+            ><i class="far fa-envelope"></i
+          ></a>
+        </li>
+        <li class="social-item">
+            <a
+              class="social-link"
+              target="_blank"
+              href="https://www.instagram.com"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

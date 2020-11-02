@@ -1,43 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointments</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+  />
+    <link rel="stylesheets" href="styles.css" />
+</head>
+
+    <header>
+        <nav class="nav">
+        <a href="/home/index" class="logo">NJ Med</a>
+        <ul class="nav-list">
+            <li class="nav-items">
+                <a href="/home/index" class="nav-link">home</a>
+            </li>
+            <li class="nav-items">
+                <a href="#" class="nav-link">TeleVisit</a>
+            </li>
+            <li class="nav-items">
+                <a href="view-records.html" class="nav-link">View My Records</a>
+            </li>
+            <li class="nav-items">
+                <a href="http://localhost:3000/users/edit" class="nav-link">Manage Account</a>
+            </li>
+            <li class="nav-items">
+                <a href="/home/book" class="nav-link">Book A New Appointment</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<body>
+  <main>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
+    <div class="field">
+      <%= f.label :street_address %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.text_field :street_address, autocomplete: "street_address" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :zip_code %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.text_field :zip_code, autocomplete: "new-zip_code" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
     <% end %>
-  </div>
+  </main>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  <h3>Cancel my account</h3>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+  <%= link_to "Back", :back %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</body>
+</html>
