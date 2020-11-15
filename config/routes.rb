@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :installs
   get 'home/index'
   get "home/home"
   get "home/book"
