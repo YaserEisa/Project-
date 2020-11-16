@@ -31,7 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise', '>=4.7.3'
 
-gem 'devise-jwt', '~> 0.7.0'
+# attemped fix for https://github.com/waiting-for-dev/devise-jwt/issues/153
+#gem 'dry-configurable', '=0.9'
+gem 'devise-jwt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

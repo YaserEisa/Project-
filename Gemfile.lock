@@ -244,7 +244,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (>= 4.7.3)
-  devise-jwt (~> 0.7.0)
+  devise-jwt
   jbuilder (~> 2.7)
   pg
   puma (~> 4.1)
