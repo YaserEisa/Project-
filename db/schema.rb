@@ -15,31 +15,6 @@ ActiveRecord::Schema.define(version: 2020_10_26_041228) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "Account", id: :serial, force: :cascade do |t|
-    t.text "AccountID"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "Membership", id: :serial, force: :cascade do |t|
-    t.string "Related_Username"
-    t.integer "PracticeID"
-    t.integer "RoleID"
-    t.string "email"
-    t.string "contact_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "Users", id: :serial, force: :cascade do |t|
-    t.string "FirstName"
-    t.string "LastName"
-    t.text "Username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "models", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -50,21 +25,6 @@ ActiveRecord::Schema.define(version: 2020_10_26_041228) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_models_on_email", unique: true
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-  end
-
-  create_table "practice", id: :serial, force: :cascade do |t|
-    t.string "name"
-    t.text "AccountID"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "session", id: :serial, force: :cascade do |t|
-    t.text "Username"
-    t.text "PasswordSalt"
-    t.text "PasswordHash"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
