@@ -13,7 +13,7 @@ html {
 body {
   font-family: sans-serif;
   padding-top: 120px;
-  background-color: rgb(50, 151, 168);
+  background-color: #51b4caa1;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(50, 109, 168);
+  background-color: 50, 151, 168;
   z-index: 1000;
   margin: 0 auto;
   padding: 0 1rem;
@@ -32,7 +32,7 @@ h3 {
  justify-content: left;
  align-items: left;
  font-size: 1rem;
- color: rgb(28, 29, 31);
+ color: rgba(28, 29, 31);
 }
 
 h4 {
@@ -67,6 +67,19 @@ field {
   transition: height 0.5s ease;
 }
 
+.main-form {
+  width: 1600px;
+  margin: auto;
+  background-color: 50, 151, 168;
+}
+
+.row {
+  width: 1600px;
+  margin: auto;
+  background-color: 50, 151, 168;
+}
+
+
 .nav a {
   text-decoration: none;
   color: black;
@@ -94,7 +107,7 @@ field {
   width: 100%;
   height: 2px;
   /* background-color: #fff; */
-  background-color: rgba(242, 183, 5, 1);
+  background-color: #51b4caa1;
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -128,8 +141,15 @@ field {
   display: block;
   justify-content: center;
   align-items: center;
-  background-color: rgb(50, 151, 168);
+  background-color: 50, 151, 168;
   padding-top: 100px;
+}
+
+.col {
+  width: 8000px;
+  margin: auto;
+  padding-top: 20px;
+  background-color: 50, 151, 168;
 }
 
 .book h1 {
@@ -138,12 +158,13 @@ field {
   align-items: center;
   padding-top: 25px;
   font-size: 1.5rem;
+  background-color: 50, 151, 168;
 }
 
 .alert {
   min-height: 5vh;
   display: block;
-  background-color: rgb(50, 151, 168);
+  background-color: 50, 151, 168;
   padding-top: 10px;
 }
 
