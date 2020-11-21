@@ -34,6 +34,9 @@ gem 'devise', '>=4.7.3'
 #gem 'dry-configurable', '=0.9'
 gem 'devise-jwt'
 
+# https://medium.com/@nandhae/2019-how-i-set-up-authentication-with-jwt-in-just-a-few-lines-of-code-with-rails-5-api-devise-9db7d3cee2c0
+gem 'rack-cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
