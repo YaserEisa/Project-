@@ -16,5 +16,9 @@ class ApplicationController < ActionController::Base
     "/home/index"
   end
 
+  def after_sign_out_path_for(resource_or_scope)
+    "https://cs673-patient-portal.herokuapp.com/home/index"
+  end
+
  # respond_to :json
 end

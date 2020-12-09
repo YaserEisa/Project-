@@ -18,6 +18,10 @@
           <li class="nav-items">
               <a href="#" class="nav-link">home</a>
           </li>
+          </li>
+            <li class="nav-items">
+              <%= button_to "logout", destroy_user_session_path, method: :delete, class: "button"   %>
+            </li>
           <li class="nav-items">
               <a href="http://group2-patient-portal.herokuapp.com/televisit" class="nav-link">TeleVisit</a>
           </li>
