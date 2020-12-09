@@ -60,3 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # For API testing/prototype
 gem 'ruby_cowsay'
+
+gem 'net-http'
+gem 'jsonapi-resources'
+gem 'httparty'
